@@ -17,7 +17,7 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid 3MVG91BJr_0ZDQ4uBIkhvPeirDfZmwG9DOl5lf4vN4OHfDjXOaoSYx2zofirwj3IGALCNUfY15xqCCYkpfohH --jwtkeyfile openssl\bin/server.key --username aragongarciaenrique@playful-otter-j39r22.com --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid 3MVG91BJr_0ZDQ4uBIkhvPeirDfZmwG9DOl5lf4vN4OHfDjXOaoSYx2zofirwj3IGALCNUfY15xqCCYkpfohH --jwtkeyfile C:\openssl\bin\server.key --username aragongarciaenrique@playful-otter-j39r22.com --instanceurl https://test.salesforce.com
 
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 2
